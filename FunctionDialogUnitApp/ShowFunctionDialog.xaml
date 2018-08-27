@@ -1,0 +1,39 @@
+﻿<ContentDialog
+    x:Class="FunctionDialogUnitApp.ShowFunctionDialog"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:FunctionDialogUnitApp"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    >
+
+    <Grid Background="LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0"
+                   Name="Function"
+                   Text="{x:Bind Command}"
+                   FocusVisualPrimaryBrush="Red"
+                   SelectionHighlightColor="Red"
+                   IsColorFontEnabled="True"
+                   FontSize="32"
+                   
+                   TextWrapping="WrapWholeWords"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center">
+        </TextBlock>
+
+        <Button Grid.Row="1"
+                Name="Button"
+                Content="OK"
+                FontSize="24"
+                BorderThickness="3"
+                Background="CadetBlue" 
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Click="OK_ButtonClick" Width="150"/>
+    </Grid>
+</ContentDialog>
